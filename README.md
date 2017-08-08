@@ -7,3 +7,6 @@ A React resposive navigation component
 - Displays hamburger menu on phone
 - Uses react-responsive
 - Bootswatch theme is baked-in
+
+## Configuration
+- see topbar.config.js
