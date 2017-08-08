@@ -5,10 +5,11 @@ import './style.css'
 import Responsive from 'react-responsive'
 import TopBarDesktop from './TopBarDesktop'
 import TopBarPhone from './TopBarPhone'
-// Desktop, tablet and mobile setup
-const Desktop = ({ children }) => <Responsive minWidth={992} children={children} />
-const Tablet = ({ children }) => <Responsive minWidth={768} maxWidth={992} children={children} />
-const Phone = ({ children }) => <Responsive maxWidth={768} children={children} />
+import { brand, menuItems, breakPoints } from './topbar.config'
+
+const Desktop = ({ children }) => <Responsive minWidth={breakPoints.desktopMinWidth} children={children} />
+const Tablet = ({ children }) => <Responsive minWidth={breakPoints.tabletMinWidth} maxWidth={breakPoints.tabletMaxWidth} children={children} />
+const Phone = ({ children }) => <Responsive maxWidth={breakPoints.phoneMaxWidth} children={children} />
 
 // Default (desktop, tablet) and mobile setup
 // const Default = ({ children }) => <Responsive minWidth={768} children={children} />;
@@ -19,13 +20,22 @@ const TopBar = () => {
   return (
     <div>
       <Desktop>
-        <TopBarDesktop />
+        <TopBarDesktop
+          brand={brand}
+          menuItems={menuItems}
+        />
       </Desktop>
       <Tablet>
-        <TopBarDesktop />
+        <TopBarDesktop
+          brand={brand}
+          menuItems={menuItems}
+        />
       </Tablet>
       <Phone>
-        <TopBarPhone />
+        <TopBarPhone
+          brand={brand}
+          menuItems={menuItems}
+        />
       </Phone>
     </div>
   )
