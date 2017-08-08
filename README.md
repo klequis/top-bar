@@ -1,7 +1,7 @@
 # Top Bar
 A React responsive navigation component
 
-My first try at creating a reusable React component. Suggestions and advice welcome.
+My first try at creating a reusable and configurable React component. Suggestions and advice welcome.
 
 ## About
 - Isn't wrapped-up for easy reuse but could end-up that way. Contributions welcome
